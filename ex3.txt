@@ -1,0 +1,38 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class ex3
+{
+ public static void main(String[]args)
+ {
+  try
+  {
+   int n = readValue("Give an integer.");
+   fractionSum(n);
+   System.out.println(series);
+  }
+  catch (Exception e)
+  {
+   System.out.println("Invalid input.");
+  }
+ }
+ public static double fractionSum(int n)
+ {
+  double series=1;
+  for (int i=2; i<=6; i++)
+  {
+   series=series+(1/i);
+  }
+  return series;
+ }
+ 
+ private static int readValue(String prompt)  throws IOException
+ {
+  if (!prompt.isEmpty())
+  {
+   System.out.println(prompt);
+  }
+  Scanner scanner = new Scanner(System.in);
+  return scanner.nextInt();
+ }
+}
